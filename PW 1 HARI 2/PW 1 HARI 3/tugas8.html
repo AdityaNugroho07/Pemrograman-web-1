@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Live Code - HTML & CSS</title>
+<style>
+  * {
+    text-align: center;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {background-color: lightgray}
+</style>
+   </head>
+<body>
+<h1>JavaScript Arithmetic</h1>
+  <table>
+    <tr>
+      <th>Variabel</th>
+      <th>Nilai</th>
+    </tr>
+    <tr>
+      <td>a</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Hasil</td>
+      <td id="demo" onmouseover=math() onmouseleave=math2()></td>
+    </tr>
+  </table>
+
+  <script>
+    function math() {
+      var a = 5;
+      var b = 2;
+      var c = 1;
+     hasil = a + b - c;
+      document.getElementById("demo").innerHTML=hasil;
+    }
+    function math2() {
+      document.getElementById("demo").innerHTML="";
+    }
+  </script>
+</body>
+</html>

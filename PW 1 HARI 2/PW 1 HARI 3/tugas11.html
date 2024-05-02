@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Live Code - HTML & CSS</title>
+<style>
+  * {
+    text-align: center;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {background-color: lightgray}
+</style>
+   </head>
+<body>
+<h1>JavaScript Arithmetic</h1>
+  <table>
+    <tr>
+      <th>Variabel</th>
+      <th>Nilai</th>
+
+    </tr>
+    <tr>
+      <td>a</td>
+      <td id="nilai_a">5</td>
+    </tr>
+    <tr>
+      <td>b</td>
+      <td id="nilai_b">2</td>
+    </tr>
+    <tr>
+      <td>c</td>
+      <td id="nilai_c">1</td>
+    </tr>
+    <tr>
+      <td>Hasil</td>
+      <td id="demo" onmouseover="math()" onmouseleave="math2()"></td>
+    </tr>
+  </table>
+  <button onclick="ubahnilai()">Ubah Nilai</button>
+
+
+  <script>
+    function math() {
+      var a = parseInt(document.getElementById("nilai_a").innerHTML)
+      var b = parseInt(document.getElementById("nilai_b").innerHTML)
+      var c = parseInt(document.getElementById("nilai_c").innerHTML)
+     hasil = a + b - c;
+      document.getElementById("demo").innerHTML=hasil;
+    }
+    function math2() {
+document.getElementById("demo").innerHTML="";
+    }
+      function ubahnilai() {
+        let ubaha = prompt("masukan nilai 'a'");        document.getElementById("nilai_a").innerHTML = ubaha;
+        let ubahb = prompt("masukan nilai 'b'");       document.getElementById("nilai_b").innerHTML = ubahb;
+        let ubahc = prompt("masukan nilai 'c'");
+document.getElementById("nilai_c").innerHTML = ubahc;          }       
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge Live Code - HTML & CSS</title>
+<style>
+   table, th, td {
+     border:1px solid black;
+     background-color: aliceblue;
+   }
+  th{
+    color:chocolate;
+  }
+ img {
+   width: 100px;
+   height: auto;
+ }
+</style>
+   </head>
+<body>
+<h1>Latihan Tabel</h1>
+  <table style="border: 1px;">
+    <tr>
+      <th>Materi</th>
+      <th>sub materi</th>
+      <th style="text-align: reght;">Icon</th>
+    </tr>
+    <tr>
+      <td>Materi 1</td>
+      <td>HTML</td>
+      <td><img src="https://www.techfor.id/wp-content/uploads/2019/12/html.png" width="100" height="40"  onclick="changeIcon(this)"></td>
+    </tr>
+  <tr>
+    <td>Materi 2</td>
+    <td>CSS</td>
+    <td><img src="http://www.goldenapplewebdesign.com/wp-content/uploads/2011/07/css3.jpg" width="80" height="80" onclick="changeIcon(this)"></td>
+  </tr>
+    <tr>
+      <td>Materi 3</td>
+      <td>JavaScrip</td>
+      <td><img src="https://tse2.mm.bing.net/th?id=OIP.I5XOh9o_kbTNsXnsIc53aAHaHa&pid=Api&P=0&h=180" width="80" height="80" onclick="changeIcon(this)"></td>
+    </tr>
+    
+  </table>
+  <script>
+      function changeIcon(element) {
+          // Mengganti gambar saat diklik
+          if (element.src.includes("https://www.techfor.id/wp-content/uploads/2019/12/html.png")) {
+              element.src = "https://bacsoftwareconsulting.com/blog/wp-content/uploads/2015/05/html-4.jpg"; // Ubah sesuai gambar baru untuk HTML
+          } else if (element.src.includes("http://www.goldenapplewebdesign.com/wp-content/uploads/2011/07/css3.jpg")) {
+              element.src = "https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo.png"; // Ubah sesuai gambar baru untuk CSS
+          } else if (element.src.includes("js_icon.jpg")) {
+              element.src = "new_js_icon.jpg"; // Ubah sesuai gambar baru untuk JavaScript
+          }
+      }
+  </script>
+ 
+
+    
+</body>
+</html>
